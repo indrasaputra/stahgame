@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>STAH Game!</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link rel="shortcut icon" href="assets/img/goodalakazam.jpeg" >
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+		<link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+		<link href="dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+        	body
+        	{
+        		background-image: url(./assets/img/schematics2013.png);
+        		background-repeat: repeat;
+        	}
+            .example-modal .modal
+            {
+                position: relative;
+                top: auto;
+                bottom: auto;
+                right: auto;
+                left: auto;
+                display: block;
+                z-index: 1;
+            }
+            .example-modal .modal
+            {
+                background: transparent!important;
+            }
+        </style>
+	</head>
+	<body class="skin-blue layout-top-nav">
+        <div class="wrapper" >
+    		<header class="main-header">               
+        		<nav class="navbar navbar-static-top">
+          			<div class="container">
+            			<div class="navbar-header">
+              				<a href="index.html" class="navbar-brand" style="color: white"><b>STAH</b>&nbsp;Game</a>
+              				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                				<i class="fa fa-bars"></i>
+              				</button>
+            			</div>
+            			<div class="collapse navbar-collapse pull-right" id="navbar-collapse">
+              				<ul class="nav navbar-nav">
+                				<li class="active">
+                					<a href="story.html">Story <span class="sr-only">(current)</span></a>
+                				</li>
+                				<li>
+                					<a href="guide.html">How To Play</a>
+                				</li>
+                				<li>
+                					<a href="about.html">About</a>
+                				</li>
+              				</ul>                                    				
+            			</div>
+            		</div>
+            	</nav>
+            </header>
+        </div>
+        <div class="content-wrapper" style="background-image: url(./assets/img/schematics2013.png); background-repeat: repeat;">
+	        <div class="container">
+	          	<section class="content">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="alert alert-warning alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <p id="message">Thinking...</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+	            	<div class="row">
+	            		<div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="alert alert-info bg-purple">
+                                <center>
+                                    The number of remaining stones:<br/>
+                                    <h2 id="stone"></h2>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+	            	</div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="box box-primary box-solid">
+                                <div class="box-header with-border">
+                                    <center><h3 class="box-title">Choices</h3></center>
+                                </div>
+                                <div class="box-body">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="1" id="number-1">
+                                            <h4>1</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="2" id="number-2">
+                                            <h4>2</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="3" id="number-3">
+                                            <h4>3</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="4" id="number-4">
+                                            <h4>4</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="5" id="number-5">
+                                            <h4>5</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="6" id="number-6">
+                                            <h4>6</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="7" id="number-7">
+                                            <h4>7</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="8" id="number-8">
+                                            <h4>8</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="9" id="number-9">
+                                            <h4>9</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-block number disabled bg-purple" value="10" id="number-10">
+                                            <h4>10</h4>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="callout callout-success">
+                                <h4>Your Moves</h4>
+                                <p id="playerMoves"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="callout callout-danger">
+                                <h4>Cipio's Moves</h4>
+                                <p id="computerMoves"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+	          	</section>
+	        </div>
+	    </div>
+	    <footer class="main-footer">
+        	<center>
+                <strong>Created by <a href="https://id.linkedin.com/in/saputraindra" target="_blank">Indra Saputra</a></strong>
+            </center>
+      	</footer>
+
+        <div class="modal fade" id="startGameModal" tabindex="-1" role="dialog" aria-labelledby="startGameModalLabel" aria-hidden="true">
+            <div class="modal-primary">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="startGameModalLabel">Who will be the first player to play?</h4>
+                        </div>
+                        <div class="modal-body">
+                            The first player will be the first one to remove the stones from the table.<br/>
+                            Many people believe that the player who moves first would be given an advantage.
+                        </div>
+                        <div class="modal-footer">
+                            <center>
+                                <button type="button" class="btn btn-danger" id="playerButton">You</button>
+                                <button type="button" class="btn btn-success" id="computerButton">Cipio</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="endGameModal" tabindex="-1" role="dialog" aria-labelledby="endGameModalLabel" aria-hidden="true">
+            <div class="modal-info">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="endGameModalLabel">Result</h4>
+                        </div>
+                        <div class="modal-body" id="resultMessage">
+                        </div>
+                        <div class="modal-footer">
+                            <center>
+                                <button type="button" class="btn btn-primary" id="playButton">Play Again</button>
+                                <a href="index.html" class="btn btn-danger">Exit</a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    	<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    	<script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+	    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	    <script src="dist/js/app.min.js" type="text/javascript"></script>
+        <script src="assets/js/game.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+                $('.modal').modal({
+                    keyboard: false,
+                    backdrop: 'static'
+                });
+				$('#endGameModal').modal('hide');
+                $('#startGameModal').modal('show');
+                
+                $('#playerButton').click(function(){
+                    showMessage(0);
+                    $('#startGameModal').modal('hide');
+                });
+                $('#computerButton').click(function(){
+                    showMessage(1);
+                    $('#startGameModal').modal('hide');
+                    computerFirst();
+                });
+			});
+		</script>
+	</body>
+</html>
